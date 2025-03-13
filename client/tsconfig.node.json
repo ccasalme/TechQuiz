@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
     "composite": true,
-    "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "strict": true
+    "moduleResolution": "bundler",  // 👈 set to 'bundler' as suggested by the error
+    "types": ["node"]
   },
-  "include": ["../vite.config.ts"]
+  "include": ["vite.config.ts"]
 }
