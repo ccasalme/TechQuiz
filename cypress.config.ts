@@ -1,13 +1,12 @@
-// TechQuiz/cypress.config.ts (at the root)
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
   component: {
     devServer: {
       framework: 'react',
-      bundler: 'vite',
+      bundler: 'vite', // ✅ explicitly define Vite for React
     },
-    specPattern: 'cypress/component/**/*.cy.{ts,tsx}',
+    specPattern: 'cypress/component/**/*.cy.{ts,tsx}', // ✅ Ensures Cypress finds component tests
   },
   e2e: {
     baseUrl: 'http://localhost:3000',
