@@ -1,11 +1,11 @@
-// TechQuiz/cypress/tsconfig.json (inside cypress folder)
 {
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "lib": ["dom", "esnext"],
-    "types": ["cypress"],
-    "isolatedModules": false
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "types": ["cypress", "node"]
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }
