@@ -1,14 +1,18 @@
 import db from '../config/connection.js';
-import { Question } from '../models/index.js'
+import { Question } from '../models/index.js';
 import cleanDB from './cleanDb.js';
-
-import questionData from './pythonQuestions.json' assert{ type: 'json'};
+import fs from 'fs';
 
 try {
   await db();
   await cleanDB();
 
-  // bulk create each model
+  // explicitly read JSON data correctly with fs
+  const questionData = JSON.parse(
+    fs.readFileSync(new URL('./pythonQuestions.json', import.meta.url), 'utf-8')
+  );
+
+  // explicitly insert into MongoDB
   await Question.insertMany(questionData);
 
   console.log('Seeding completed successfully!');
