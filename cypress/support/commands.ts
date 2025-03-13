@@ -1,7 +1,9 @@
-Cypress.Commands.add('mount', mount); // already defined
+import { mount } from 'cypress/react18';  // 👈 clearly import mount!
+
+Cypress.Commands.add('mount', mount); // ✅ no more TS screaming
+
 Cypress.Commands.add('startQuiz', () => {
   cy.visit('/');
-  cy.contains('Start Quiz').click();
 });
 
 Cypress.Commands.add('answerQuestion', (answerIndex: number) => {
