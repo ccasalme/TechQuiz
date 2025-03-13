@@ -1,12 +1,11 @@
+// TechQuiz/cypress/tsconfig.json (inside cypress folder)
 {
-    "extends": "../tsconfig.json",
-    "include": [
-      "**/*.ts"
-    ],
-    "compilerOptions": {
-      "target": "es5",
-      "lib": ["es5", "dom"],
-      "types": ["cypress"]
-    }
-  }
-  
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "types": ["cypress"],
+    "isolatedModules": false
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

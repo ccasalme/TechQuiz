@@ -1,12 +1,16 @@
-import { defineConfig } from 'cypress'
+// TechQuiz/cypress.config.ts (at the root)
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'vite',
     },
-    baseUrl: 'http://localhost:3000', // Adjust this to the URL of your local or dev server
+    specPattern: 'cypress/component/**/*.cy.{ts,tsx}',
   },
-
-  // Include any other configuration options that are relevant to your project
+  e2e: {
+    baseUrl: 'http://localhost:3000',
+    specPattern: 'cypress/e2e/**/*.cy.{ts,tsx}',
+  },
 });
