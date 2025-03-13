@@ -1,17 +1,46 @@
+/* General Body Styles */
 body {
   font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Just an example, choose a background that fits your design */
+  color: #333; /* Default text color, ensures good readability */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik Mono One', sans-serif;
+  color: #222; /* Slightly darker color for headings for emphasis */
 }
 
+/* Specific styles for NotFound component */
+.not-found-container {
+  text-align: center;
+  padding-top: 5rem; /* Adds vertical spacing from the top */
+}
+
+.not-found-container h2 {
+  font-size: 2.5rem; /* Larger font size for the main error message */
+}
+
+.not-found-container p {
+  font-size: 1.2rem; /* Properly size paragraph text */
+  color: #666; /* Lighter text color for less emphasis */
+}
+
+/* Small text style */
 .small {
   font-weight: 300;
   font-style: italic;
+}
+
+/* Button styles, if you use custom buttons */
+.button-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none; /* Removes underline from links styled as buttons */
+  display: inline-block;
 }

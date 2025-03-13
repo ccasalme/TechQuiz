@@ -4,6 +4,10 @@ dotenv.config();
 import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI || '';
+if (!MONGODB_URI) {
+  console.error('MongoDB URI is not defined in .env');
+  process.exit(1);  // Exit the process with an error code
+}
 
 const db = async (): Promise<typeof mongoose.connection> => {
   try {
