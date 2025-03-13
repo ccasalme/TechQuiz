@@ -3,11 +3,15 @@ import { MountOptions, MountReturn } from 'cypress/react18';
 
 declare global {
   namespace Cypress {
-    interface Chainable {
+    interface Chainable<Subject = any> {
       mount(
         jsx: React.ReactNode,
         options?: MountOptions
-      ): Cypress.Chainable<MountReturn>;
+      ): Chainable<MountReturn>;
+
+      startQuiz(): Chainable<void>;
+      answerQuestion(answerIndex: number): Chainable<void>;
+      assertSpinner(): Chainable<JQuery<HTMLElement>>;
     }
   }
 }
