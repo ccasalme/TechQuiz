@@ -139,7 +139,7 @@ See [LICENSE](./LICENSE) for more details.
 
 ---
 
-## 🎥 Video:  
+## 🎥 Videos:  
 
 ### Tech Quiz App Functionality & Cypress Demo
 
