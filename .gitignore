@@ -135,3 +135,26 @@ dist
 cypress/videos
 cypress/screenshots
 cypress/reports
+
+# Cypress-generated files
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/results/
+cypress/reports/
+coverage/
+
+# Cypress cache (to avoid unnecessary installs)
+node_modules/.cache/cypress/
+
+# Logs & temp files
+cypress/logs/
+cypress/tmp/
+
+# Vitest Coverage (if using)
+.vitest/
+.vitest_cache/
+
+#cypress folders
+1-getting-started
+2-advanced-examples
