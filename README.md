@@ -141,13 +141,18 @@ See [LICENSE](./LICENSE) for more details.
 
 ## 🎥 Video:  
 
-### Tech Quiz App Functionality
+### Tech Quiz App Functionality & Cypress Demo
 
 ### Note:
 The correct answers can be found in server/src/seeds/pythonQuestions.json
 
 
 https://github.com/user-attachments/assets/2843076e-501c-42d7-91aa-cdc9d99f6d53
+
+
+https://github.com/user-attachments/assets/94c38dd9-0ea2-495f-b522-96f22ad779f1
+
+
 
 
 
